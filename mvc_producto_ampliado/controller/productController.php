@@ -33,10 +33,10 @@ class ProductController
     //Inserto en BBDD y hago la operaciones en BBDD
     function insertProduct()
     {
-        $product = (new Product())->setName($_POST['name'])->setShort_name($_POST['shortName'])
+        $product = (new Product())->setName($_POST['name'])->setShort_name($_POST['short_name'])
             ->setPvp($_POST['pvp']);
 
-        $result = (new ProductRepository())->addProduct(null);
+        $result = (new ProductRepository())->addProduct($product);
         
         $message = '';
         if($result){
