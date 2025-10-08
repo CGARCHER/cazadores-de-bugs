@@ -8,11 +8,10 @@ class Product{
 
     public function __construct($cod=0, $short_name='', $pvp=0, $name='')
     {
-        $cod = $cod;
-        $short_name = $short_name;
-        $pvp = $pvp;
-        $name = $name;
-        return $this;
+        $this -> cod = $cod;
+        $this -> short_name = $short_name;
+        $this -> pvp = $pvp;
+        $this -> name = $name;
     }
 
     /**
