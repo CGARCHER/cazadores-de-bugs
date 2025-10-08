@@ -22,7 +22,7 @@ class ProductRepository{
         return $product;
     } 
 
-    public function addProduct($product){
+   public function addProduct($product){
         $query = $this->getPDO()->prepare("INSERT INTO PRODUCTS(SHORT_NAME, PVP, NOMBRE) VALUES (?,?,?)");
         $query->bindValue(1, $product->getShort_name());
         $query->bindValue(2, $product->getPvp());
